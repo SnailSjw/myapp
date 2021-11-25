@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>表单域（了解）</title>
+</head>
+<body>
+    <form action="dome.php" method="get" name="name1">
+        <label for="tel">电话：</label> <input type="text" name="tel" value="请输入用户名" id="tel"> </br>
+        <label for="pwd" >密码：</label> <input id="pwd" type="password" name="pwd"> </br>
+        性别：  男 <input type="radio" name="sex"> 女 <input type="radio" name="sex"> </br>
+        爱好： 吃饭 <input type="checkbox" name="hobby" value="1"> 睡觉<input type="checkbox" name="hobby" value="2"> 打豆豆<input type="checkbox" name="hobby" value="3">
+        <br>
+        <select >
+            <option >甘肃</option>
+            <option >陕西</option>
+            <option >山西</option>
+            <option >云南</option>
+        </select>
+        <br>
+        <label for="ta" >自我介绍：</label> <textarea id="ta" name="ta" cols="30" rows="5"></textarea>
+        <br>
+        <input type="submit" value="注册">     <input type="reset" value="重置"> <br>
+        <input type="button" value="获取验证码"><br>
+        <input type="file" >
+    </form>
+
+</body>
+</html>
