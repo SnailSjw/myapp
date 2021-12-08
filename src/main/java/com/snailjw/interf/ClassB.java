@@ -2,14 +2,13 @@ package com.snailjw.interf;
 
 import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author : snail
  * @date : 2021-11-29 21:12
  **/
-public class ClassB extends Thread {
+public class ClassB extends ClassA implements InterfaceC,InterfaceB {
 
     public static void main(String[] args) {
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap(10);
@@ -32,4 +31,32 @@ public class ClassB extends Thread {
         });
         thread.start();
     }
+
+    @Override
+    public void test() {
+
+    }
+
+    @Override
+    public String print() {
+        return null;
+    }
+
+    @Override
+    public void printStr() {
+
+    }
+
+    @Override
+    public void printArray() {
+
+    }
+
+    @Override
+    public void sleep(long millis) {
+
+    }
+
+
+
 }
