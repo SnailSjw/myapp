@@ -14,13 +14,13 @@ public class Client {
     private static final int port = 8888;
 
     public static void main(String[] args) {
-        try {
+        try (Socket socket = new Socket(address,port);
+             // 要发送给服务器的信息
+             OutputStream os = socket.getOutputStream();
+             PrintWriter pw = new PrintWriter(os);)
+        {
             // 和服务器创建连接
-            Socket socket = new Socket(address,port);
 
-            // 要发送给服务器的信息
-            OutputStream os = socket.getOutputStream();
-            PrintWriter pw = new PrintWriter(os);
             pw.write("客户端发送信息");
             pw.flush();
 
@@ -36,9 +36,6 @@ public class Client {
 
             br.close();
             is.close();
-            os.close();
-            pw.close();
-            socket.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
